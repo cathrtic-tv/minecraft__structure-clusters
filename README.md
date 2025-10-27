@@ -17,7 +17,7 @@
 
 <br>
 
-Find groups of various structures for a given Minecraft seed, using data exported from [Cubiomes Viewer](https://github.com/Cubitect/cubiomes-viewer) by [Cubitect](https://github.com/Cubitect). Use cases include: finding multi-witch huts, dense clusters of multiple structure types, and ideal base building locations for specific Minecraft worlds. 
+Find clusters of various structures for given Minecraft seeds, using data exported from [Cubiomes Viewer](https://github.com/Cubitect/cubiomes-viewer) by [Cubitect](https://github.com/Cubitect). Use cases include: finding multi-witch huts, dense clusters of multiple structure types, and ideal base building locations for specific Minecraft worlds. 
 
 This project operates independently of Cubiomes Viewer's GPLv3-licensed codebase, encourages its usage, and utilizes its exported structure data as an input.
 
@@ -128,53 +128,44 @@ Customize behavior using these environment variables:
 ## Structure Data
 Structure data must be provided as CSV files organized in the `DATA_PATH` directory. Each dataset should reside in its own subfolder as either a `data.csv` or `data.txt` file, exported from Cubiomes Viewer.
 
-<table align="center">
-    <!-- <tr>
-        <th width="50%"></th>
-        <th width="50%"></th>
-    </tr> -->
-    <tr valign="top">
-        <td width="50%">
-            <img src=".github/README/cubiomes-export.png" width="100%">
-        </td>
-        <td width="50%">
-            <ul>
-                <br>
-                <li>
-                    Launch <a href="https://github.com/Cubitect/cubiomes-viewer">Cubiomes Viewer</a>.
-                </li>
-                <br>
-                <li>
-                    Enter your target Minecraft version and world seed, and enable large biome generation if applicable.
-                </li>
-                <li>
-                    Navigate to the <strong>Structures</strong> tab, and set the <code>Seed(s)</code> dropdown to <code>"Current Seed"</code>.
-                </li>
-                <li>
-                    Define your search area using either:
-                    <ul>
-                        <li>The <code>"From visible"</code> button for the current view.</li>
-                        <li>Manual coordinate entry for custom boundaries.</li>
-                    </ul>                   
-                    <blockquote>
-                        E.g. X<sub>1</sub>: -10000, Z<sub>1</sub>: -10000, X<sub>2</sub>: 10000, Z<sub>2</sub>: 10000
-                    </blockquote>
-                </li>
-                <li>
-                    Navigate to the <strong>Structures</strong> sub-tab, select <code>"All structures"</code>, and enable <code>"Collect all instances"</code> on.
-                    <blockquote>
-                        Alternatively, to optimize for larger Analysis and Exporting, select <code>"Active map selections"</code>, and whitelist the desired structures using the right-most column in Cubiomes Viewer.
-                    </blockquote>
-                </li>
-                <li>
-                    Finally, execute <code>Analyze</code>, and <code>Export</code> the results as <code>"data.csv"</code> or <code>"data.txt"</code> to your <a href="/data"><code>[DATA_PATH]/[Dataset Folder]</code></a> directory.
-                </li>
-                <br>
-                <li>
-                    Your structure data is now ready! Run <code>npm run main</code> to generate your structure clustering results.
-                </li>
-                <br>
-            </ul>
-        </td>
-    </tr>
-</table>
+<br>
+
+<p align="center">
+    <img src=".github/README/cubiomes-export.png" width="50%">
+</p>
+
+<ol>
+    <br>
+    <li>
+        Launch <a href="https://github.com/Cubitect/cubiomes-viewer">Cubiomes Viewer</a>.
+    </li>
+    <li>
+        Enter your target Minecraft version and world seed, and enable large biome generation if applicable.
+    </li>
+    <li>
+        Navigate to the <strong>Structures</strong> tab, and set the <code>Seed(s)</code> dropdown to <code>"Current Seed"</code>.
+    </li>
+    <li>
+        Define your search area using either:
+        <ul>
+            <li>The <code>"From visible"</code> button for the current view.</li>
+            <li>Manual coordinate entry for custom boundaries.</li>
+        </ul>                   
+        <blockquote>
+            E.g. X<sub>1</sub>: -10000, Z<sub>1</sub>: -10000, X<sub>2</sub>: 10000, Z<sub>2</sub>: 10000
+        </blockquote>
+    </li>
+    <li>
+        Navigate to the <strong>Structures</strong> sub-tab, select <code>"All structures"</code>, and enable <code>"Collect all instances"</code> on.
+        <blockquote>
+            Alternatively, to optimize for larger Analysis and Exporting, select <code>"Active map selections"</code>, and whitelist the desired structures using the right-most column in Cubiomes Viewer.
+        </blockquote>
+    </li>
+    <li>
+        Finally, execute <code>Analyze</code>, and <code>Export</code> the results as <code>"data.csv"</code> or <code>"data.txt"</code> to your <a href="/data"><code>[DATA_PATH]/[Dataset Folder]</code></a> directory.
+    </li>
+    <li>
+        Your structure data is now ready! Run <code>npm run main</code> to generate your structure clustering results.
+    </li>
+    <br>
+</ol>
