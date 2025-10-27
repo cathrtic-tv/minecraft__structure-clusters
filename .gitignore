@@ -1,0 +1,13 @@
+.vscode/
+node_modules/
+node_outputs/
+
+.env*
+!.env*.example
+
+console.ansi
+console.log
+
+data/*/**
+data/file-history.json
+!data/example*/data.*
